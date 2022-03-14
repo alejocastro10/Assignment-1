@@ -12,8 +12,20 @@
 
 .row-content {
     margin: 1px auto;
-    padding: 30px 0px 100px 0px;
+    padding: 30px 0px 70px 0px;
     border-bottom: 1x ridge;
-    min-height: 400 px;   
-    
+    min-height: 400 px;      
+}
+
+.row-content-1 {
+    margin: 1px auto;
+    padding: 30px 0px 30px 0px;
+    border-bottom: 1x ridge;
+    min-height: 400 px;      
+}
+
+.footer {
+    background-color: #D2C4D9;
+    margin: 0px auto;
+    padding: 20px 0px 70px 0px auto;
 }
