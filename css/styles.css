@@ -44,3 +44,7 @@ body{
 .navbar-dark{
     background-color: #512DA8;
 }
+
+.card-guest{
+    padding: 20px 10px;
+}

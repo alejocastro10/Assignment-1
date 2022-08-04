@@ -42,10 +42,16 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the W orld's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-2 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
+                <div class="col-6 offset-sm-1 col-sm-3 align-self-center">
+                    <a href="#card1">
+                        <button class="btn btn-warning btn-block"><h4>Reserve Table</h4></button>
+                    </a>
+                </div>
             </div>
+
         </div>
     </header>
 
@@ -101,6 +107,57 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-8 offset-sm-2">
+            <div class="card" id="card1">
+                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+            </div>
+            <div class="card-body border card-guest">
+                <dl class="row">
+                    <dd class="col-12 col-sm-2">Number of Guests</dd>
+                    <div class="form-check">
+                        <dt class="col-2 col-sm-1"><input type="radio" name="num-guests" class="form-check-input" id="opt-1"> 
+                            <label class="form-check-label" for="opt-1">1</label>
+                    </div>
+                    <div class="form-check">
+                        <dt class="col-2 col-sm-1"><input type="radio" name="num-guests" class="form-check-input" id="opt-2"> 
+                            <label class="form-check-label" for="opt-2">2</label>
+                    </div>
+                    <div class="form-check">
+                        <dt class="col-2 col-sm-1"><input type="radio" name="num-guests" class="form-check-input" id="opt-3"> 
+                            <label class="form-check-label" for="opt-3">3</label>
+                    </div>
+                    <div class="form-check">
+                        <dt class="col-2 col-sm-1"><input type="radio" name="num-guests" class="form-check-input" id="opt-4"> 
+                            <label class="form-check-label" for="opt-4">4</label>
+                    </div>
+                    <div class="form-check">
+                        <dt class="col-2 col-sm-1"><input type="radio" name="num-guests" class="form-check-input" id="opt-5"> 
+                            <label class="form-check-label" for="opt-5">5</label>
+                    </div>
+                    <div class="form-check">
+                        <dt class="col-2 col-sm-1"><input type="radio" name="num-guests" class="form-check-input" id="opt-6"> 
+                            <label class="form-check-label" for="opt-6">6</label>
+                    </div>
+                </dl>
+                <div class="form-group row">
+                    <label for="data-time" class="col-12 col-sm-2 col-form-label">Data and Time.</label>
+                    <div class="col-5 col-md-4">
+                        <input type="tel" class="form-control" id="data" name="data" 
+                        placeholder="Data">    
+                    </div>
+                    <div class="col-5 col-sm-4">
+                        <input type="tel" class="form-control" id="time" name="time" 
+                        placeholder="Time">    
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class=" offset-sm-2 col-6 col-sm-2">
+                        <button class="btn btn-primary form-control">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"><h1>&nbsp</h1></div>
     </div>
 
     <footer class="footer">
