@@ -115,7 +115,7 @@
                     </dl>
                     <div class="form-group row">
                         <label for="reserve" class="col-6 col-sm-2 col-form-label">Section</label>
-                        <div class="btn-group col-auto" role="group">
+                        <div class="btn-group col-auto" role="group" data-bs-toggle="buttons">
                             <button type="button" class="btn btn-success">Non-smoking</button>
                             <button type="button" class="btn btn-danger">Smoking</button>
                         </div>
@@ -209,13 +209,37 @@
                     <a href="#mycarousel" role="button" data-bs-slide="next" class="carousel-control-next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-
+                    <!-- <div class="btn-group" id="carouselButton">
+                        <button type="button" class="btn btn-danger" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger"  id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div> --> 
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
+                       
                 </div>
             </div>
         </div>
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4  col-md-3">
+                <div class="btn-group">
+                    <button class="btn btn-danger">
+                        <span class="fa fa-pause"><p>hola</p></span>
+                    </button>
+                    <button class="btn btn-danger">
+                        <span class="fa fa-play"><p>gorda</p></span>
+                    </button>
+                </div>
                 <h3>Our Lipsmacking Culinary Creations</h3>
                 
             </div>
@@ -317,11 +341,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-    </script>   
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
+    <!-- <script>
+        const prueba= document.querySelector('#mycarousel');
+        prueba.carousel( { interval: 1000 } );
+    </script> -->
+
+
 </body>
 
 </html>
