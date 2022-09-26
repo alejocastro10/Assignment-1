@@ -32,9 +32,13 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>  Contact</a></li>
                  </ul>  
                  <span class="navbar-text">
-                    <a data-bs-toggle="modal" data-bs-target="#loginModal">
-                     <span class="fa fa-sign-in"> </span>Login  
+                    <a id="login">
+                        <span class="fa fa-sign-in"> </span>Login  
                     </a>
+                    <!-- <span class="navbar-text">
+                        <a data-bs-toggle="modal" data-bs-target="#loginModal">
+                         <span class="fa fa-sign-in"> </span>Login  
+                        </a> -->
                  </span>
              </div>
         </div>
@@ -157,8 +161,9 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 offset-sm-1 col-sm-3 align-self-center">                    
-                        <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#reserve-table"                         
-                        data-bs-placement="bottom"><h4>Reserve Table</h4></a>                                           
+                        <!-- <a class="btn btn-warning btn-block" data-bs-toggle="modal" data-bs-target="#reserve-table"                          -->
+                        <a class="btn btn-warning btn-block" id="reserve"                         
+                            data-bs-placement="bottom"><h4>Reserve Table</h4></a>                                           
                 </div>            
             </div>
 
@@ -209,14 +214,6 @@
                     <a href="#mycarousel" role="button" data-bs-slide="next" class="carousel-control-next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <!-- <div class="btn-group" id="carouselButton">
-                        <button type="button" class="btn btn-danger" id="carousel-pause">
-                            <span class="fa fa-pause"></span>
-                        </button>
-                        <button type="button" class="btn btn-danger"  id="carousel-play">
-                            <span class="fa fa-play"></span>
-                        </button>
-                    </div> --> 
                     <button class="btn btn-danger btn-sm" id="carouselButton">
                         <span class="fa fa-pause"></span>
                     </button>                       
@@ -292,7 +289,7 @@
                         <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-7 col-sm-5">
+                <div class="col-7 col-sm-5" id="holamundo">
                     <h5>Our Address</h5>
                     <address>
 		              121, Clear Water Bay Road<br>
@@ -328,6 +325,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
+            $("#login").click(function(){
+                $('#loginModal').modal("show");                
+            });
+            
+            $("#reserve").click(function(){
+                $('#reserve-table').modal("show");                
+            });
+
             $("#mycarousel").carousel( { interval: 2000 } )
             $("#carouselButton").click(function(){
                 if($('#carouselButton').children('span').hasClass('fa-pause')){
